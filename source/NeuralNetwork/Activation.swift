@@ -9,24 +9,32 @@
 import Foundation
 
 
-/// Enum of activation functions
+/// Enum of activation functions. To use activation function, use `perform()` method directly on activation fuction.
+///
+/// Example:
+/// ```swift
+/// let result = ActivationFunction.Sigmoidal(β: -1, x: 1.2345).perform()
+/// ```
 ///
 /// - Unipolar:       Unipolar activation function
 /// - Sigmoidal:      Sigmoidal activation function
 /// - SigmoidalDeriv: Derivative sigmoidal activation function
-enum ActivationFunction {
+public enum ActivationFunction {
     
+    /// Unipolar activation function
     case Unipolar(a: Double, x: Double)
     
+    /// Sigmoidal activation function
     case Sigmoidal(β: Double, x: Double)
     
+    /// Derivateve sigmoidal function
     case SigmoidalDeriv(β: Double, x: Double)
     
     
     /// Perform specific activation function on given parameters
     ///
     /// - returns: Result of activation process
-    func perform() -> Double {
+    public func perform() -> Double {
         switch self {
         case .Unipolar(let a, let x):
             return x >= a ? 1.0 : 0.0

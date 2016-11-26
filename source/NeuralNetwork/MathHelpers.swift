@@ -22,7 +22,7 @@ import Foundation
 /// - parameter b: Second matrix to multiplication
 ///
 /// - returns: Result of given matrixes multiplication
-func multiplyMatrixes(a: [[Double]], b: [[Double]]) -> [[Double]] {
+public func multiplyMatrixes(a: [[Double]], b: [[Double]]) -> [[Double]] {
     // Matrixes sizes
     let aRowsNumber = a.count
     let bRowsNumber = b.count
@@ -61,7 +61,7 @@ func multiplyMatrixes(a: [[Double]], b: [[Double]]) -> [[Double]] {
 /// - parameter b: Second matrix to multiplication
 ///
 /// - returns: Result of given matrixes multiplication
-func multiplyMatrixes2(a: [[Double]], b: [[Double]]) -> [[Double]] {
+public func multiplyMatrixes2(a: [[Double]], b: [[Double]]) -> [[Double]] {
     // Matrixes sizes
     let bRowsNumber = b.count
     let aColumnsNumber = a[0].count
@@ -89,7 +89,7 @@ func multiplyMatrixes2(a: [[Double]], b: [[Double]]) -> [[Double]] {
 /// - parameter b: Second matrix
 ///
 /// - returns: Result of given matrixes difference
-func matrixDifferences(a: [[Double]], b: [[Double]]) -> [[Double]] {
+public func matrixDifferences(a: [[Double]], b: [[Double]]) -> [[Double]] {
     // Matrixes sizes
     let aRowsNumber = a.count
     let bRowsNumber = b.count
@@ -121,14 +121,13 @@ func matrixDifferences(a: [[Double]], b: [[Double]]) -> [[Double]] {
 // MARK: - Matrix
 
 
-
 /// Matrix transposition. Generic method. 
 /// Writes rows of given matrix as a columns.
 ///
 /// - parameter input: Matrix to transpose
 ///
 /// - returns: Transposed matrix
-func transpose<T>(input: [[T]]) -> [[T]] {
+public func transpose<T>(input: [[T]]) -> [[T]] {
     // Guard empty input
     guard !input.isEmpty else { return [[T]]() }
     

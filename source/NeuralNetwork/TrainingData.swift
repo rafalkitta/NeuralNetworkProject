@@ -10,11 +10,11 @@ import Foundation
 
 
 /// Neural network training data structure
-struct TrainingData {
+public struct TrainingData {
     
     /// Input training data vector
-    var vectorIn: [Double] = []
+    public var vectorIn: [Double] = []
     
     /// Output training data vector
-    var vectorOut: [Double] = []
+    public var vectorOut: [Double] = []
 }

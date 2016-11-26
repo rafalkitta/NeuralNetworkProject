@@ -53,7 +53,7 @@ cd source/
 ```sh
 $ jazzy \
 --output ../doc \
---min-acl internal \
+--min-acl public \
 --author Rafał\ Kitta,\ Adrian\ Moczulski \
 --readme ../README.md \
 --github_url https://github.com/rafalkitta/NeuralNetworkProject \

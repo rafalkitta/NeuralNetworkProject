@@ -10,19 +10,19 @@ import Foundation
 
 
 /// Neural network
-class NeuralNetwork {
+public class NeuralNetwork {
     
     /// Trainig data
-    var trainingData: [TrainingData] = []
+    private var trainingData: [TrainingData] = []
     
-    /// Layers
-    var layers: [Layer] = []
+    /// Layers array. Settable only via `appendLayer(n: Int)` method
+    public var layers: [Layer] = []
     
     /// Input size
-    var sizeIn: Int = 0
+    public var sizeIn: Int = 0
     
     /// Output size
-    var sizeOut: Int = 0
+    public var sizeOut: Int = 0
     
     
     /// Default initializer
@@ -31,7 +31,7 @@ class NeuralNetwork {
     /// - parameter sizeOut: Output size
     ///
     /// - returns: `NeuralNetwork` instance
-    init(sizeIn: Int, sizeOut: Int) {
+    public init(sizeIn: Int, sizeOut: Int) {
         // Store sizes
         self.sizeIn = sizeIn
         self.sizeOut = sizeOut
@@ -48,7 +48,7 @@ class NeuralNetwork {
     /// Sets layer's perceptrons to appropriate sizes.
     ///
     /// - parameter n: New `Layer` instance
-    func appendLayer(n: Int) {
+    public func appendLayer(n: Int) {
         var newLayers: [Layer] = []
         var last = 0
         
@@ -72,7 +72,7 @@ class NeuralNetwork {
     /// - parameter trainingData: Trainig data
     ///
     /// - returns: Result vector of propagation
-    func propagate(trainingData: TrainingData) -> [Double] {
+    public func propagate(trainingData: TrainingData) -> [Double] {
         // Input vector from training data
         var vector: [Double] = trainingData.vectorIn
         
@@ -118,7 +118,7 @@ class NeuralNetwork {
     /// Performes back propagation on training data.
     ///
     /// - parameter trainingData: Training data
-    func backPropagate(trainingData: TrainingData) {
+    public func backPropagate(trainingData: TrainingData) {
         // Calculate error
         var error = calculateError(trainingData: trainingData)
         let layersCount = layers.count - 1
@@ -146,7 +146,7 @@ class NeuralNetwork {
 extension NeuralNetwork: CustomStringConvertible {
     
     /// Class instance description format
-    var description: String {
+    public var description: String {
         return "\(layers)"
     }
 }

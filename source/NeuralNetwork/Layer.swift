@@ -9,15 +9,15 @@
 import Foundation
 
 
-// Neural network layer structure
-struct Layer {
+/// Neural network layer structure
+public struct Layer {
     
     /// Perceptron
-    var perceptron: Perceptron
+    public var perceptron: Perceptron
     
     /// Values vector with values count equal to perceptron culumns number
     /// - Note: Defaultly initialized with values: 0.0
-    lazy var values: [Double] = [Double](repeating: Double(), count: self.perceptron.n)
+    public lazy var values: [Double] = [Double](repeating: Double(), count: self.perceptron.n)
     
     
     /// Defult initializer
@@ -25,7 +25,7 @@ struct Layer {
     /// - parameter perceptron: `Perceptron` instance
     ///
     /// - returns: `Layer` instance
-    init(perceptron: Perceptron) {
+    public init(perceptron: Perceptron) {
         // Store perceptron
         self.perceptron = perceptron
         // Randomize perceptron values with range -5...5
@@ -38,7 +38,7 @@ struct Layer {
 extension Layer: CustomStringConvertible {
     
     /// Structure instance description format
-    var description: String {
+    public var description: String {
         return "\(perceptron)"
     }
 }

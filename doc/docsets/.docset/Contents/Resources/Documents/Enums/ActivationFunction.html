@@ -14,7 +14,7 @@
     <a title="ActivationFunction Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (74% documented)</p>
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/rafalkitta/NeuralNetworkProject"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -33,17 +33,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/NeuralNetwork.html">NeuralNetwork</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Global Variables.html">Global Variables</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v13NeuralNetwork13neuralNetworkCS_13NeuralNetwork">neuralNetwork</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:v13NeuralNetwork6resultGSaSd_">result</a>
               </li>
             </ul>
           </li>
@@ -94,11 +83,16 @@
             <h1>ActivationFunction</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">ActivationFunction</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ActivationFunction</span></code></pre>
 
                 </div>
               </div>
-            <p>Enum of activation functions</p>
+            <p>Enum of activation functions. To use activation function, use <code>perform()</code> method directly on activation fuction.</p>
+
+<p>Example:
+<code>swift
+let result = ActivationFunction.Sigmoidal(β: -1, x: 1.2345).perform()
+</code></p>
 
 <ul>
 <li>Unipolar:       Unipolar activation function</li>
@@ -123,14 +117,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Unipolar activation function</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">ActivationFunction</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Unipolar</span><span class="p">(</span><span class="nv">a</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -154,14 +148,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Sigmoidal activation function</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">ActivationFunction</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Sigmoidal</span><span class="p">(</span><span class="nv">β</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -185,14 +179,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Derivateve sigmoidal function</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">ActivationFunction</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">SigmoidalDeriv</span><span class="p">(</span><span class="nv">β</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -223,7 +217,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">perform</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">perform</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
 
                         </div>
                       </div>
