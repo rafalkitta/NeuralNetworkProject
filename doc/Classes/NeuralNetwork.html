@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NeuralNetwork Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/NeuralNetwork" class="dashAnchor"></a>
+    <a title="NeuralNetwork Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (74% documented)</p>
+        <p class="header-right"><a href="https://github.com/rafalkitta/NeuralNetworkProject"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        NeuralNetwork Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/NeuralNetwork.html">NeuralNetwork</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork13neuralNetworkCS_13NeuralNetwork">neuralNetwork</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork6resultGSaSd_">result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ActivationFunction.html">ActivationFunction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F13NeuralNetwork17matrixDifferencesFT1aGSaGSaSd__1bGSaGSaSd___GSaGSaSd__">matrixDifferences(a:b:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F13NeuralNetwork16multiplyMatrixesFT1aGSaGSaSd__1bGSaGSaSd___GSaGSaSd__">multiplyMatrixes(a:b:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F13NeuralNetwork17multiplyMatrixes2FT1aGSaGSaSd__1bGSaGSaSd___GSaGSaSd__">multiplyMatrixes2(a:b:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F13NeuralNetwork9transposeurFT5inputGSaGSax___GSaGSax__">transpose(input:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Layer.html">Layer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Perceptron.html">Perceptron</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TrainingData.html">TrainingData</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>NeuralNetwork</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">NeuralNetwork</span></code></pre>
+
+                </div>
+              </div>
+            <p>Neural network</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NeuralNetwork13NeuralNetwork12trainingDataGSaVS_12TrainingData_"></a>
+                    <a name="//apple_ref/swift/Property/trainingData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NeuralNetwork13NeuralNetwork12trainingDataGSaVS_12TrainingData_">trainingData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Trainig data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">trainingData</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/TrainingData.html">TrainingData</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NeuralNetwork13NeuralNetwork6layersGSaVS_5Layer_"></a>
+                    <a name="//apple_ref/swift/Property/layers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NeuralNetwork13NeuralNetwork6layersGSaVS_5Layer_">layers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Layers</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">layers</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Layer.html">Layer</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NeuralNetwork13NeuralNetwork6sizeInSi"></a>
+                    <a name="//apple_ref/swift/Property/sizeIn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NeuralNetwork13NeuralNetwork6sizeInSi">sizeIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Input size</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sizeIn</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NeuralNetwork13NeuralNetwork7sizeOutSi"></a>
+                    <a name="//apple_ref/swift/Property/sizeOut" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NeuralNetwork13NeuralNetwork7sizeOutSi">sizeOut</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Output size</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">sizeOut</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NeuralNetwork13NeuralNetworkcFT6sizeInSi7sizeOutSi_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(sizeIn:sizeOut:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NeuralNetwork13NeuralNetworkcFT6sizeInSi7sizeOutSi_S0_">init(sizeIn:sizeOut:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default initializer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">sizeIn</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">sizeOut</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sizeIn</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Input size</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sizeOut</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output size</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>NeuralNetwork</code> instance</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NeuralNetwork13NeuralNetwork11appendLayerFT1nSi_T_"></a>
+                    <a name="//apple_ref/swift/Method/appendLayer(n:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NeuralNetwork13NeuralNetwork11appendLayerFT1nSi_T_">appendLayer(n:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends new layer to <code><a href="../Classes/NeuralNetwork.html#/s:vC13NeuralNetwork13NeuralNetwork6layersGSaVS_5Layer_">layers</a></code> variable. New layer is inserted to pre-last position in <code><a href="../Classes/NeuralNetwork.html#/s:vC13NeuralNetwork13NeuralNetwork6layersGSaVS_5Layer_">layers</a></code> array.
+Sets layer&rsquo;s perceptrons to appropriate sizes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">appendLayer</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>n</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>New <code>Layer</code> instance</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NeuralNetwork13NeuralNetwork9propagateFT12trainingDataVS_12TrainingData_GSaSd_"></a>
+                    <a name="//apple_ref/swift/Method/propagate(trainingData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NeuralNetwork13NeuralNetwork9propagateFT12trainingDataVS_12TrainingData_GSaSd_">propagate(trainingData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performes propagation on training data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">propagate</span><span class="p">(</span><span class="nv">trainingData</span><span class="p">:</span> <span class="kt"><a href="../Structs/TrainingData.html">TrainingData</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trainingData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Trainig data</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result vector of propagation</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC13NeuralNetwork13NeuralNetwork13backPropagateFT12trainingDataVS_12TrainingData_T_"></a>
+                    <a name="//apple_ref/swift/Method/backPropagate(trainingData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC13NeuralNetwork13NeuralNetwork13backPropagateFT12trainingDataVS_12TrainingData_T_">backPropagate(trainingData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performes back propagation on training data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">backPropagate</span><span class="p">(</span><span class="nv">trainingData</span><span class="p">:</span> <span class="kt"><a href="../Structs/TrainingData.html">TrainingData</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trainingData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Training data</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC13NeuralNetwork13NeuralNetwork11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC13NeuralNetwork13NeuralNetwork11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Class instance description format</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Rafał Kitta, Adrian Moczulski</a>. All rights reserved. (Last updated: 2016-11-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
