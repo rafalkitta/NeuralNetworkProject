@@ -94,6 +94,28 @@
             <a href='#neuralnetworkproject' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='neuralnetworkproject'>NeuralNetworkProject</h1>
 
 <p>Preedicting the class of Haberman&rsquo;s survival with neural networks</p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='requirements'>Requirements</h1>
+
+<ul>
+<li>Xcode 8.0+</li>
+<li>Swift 3.0+</li>
+</ul>
+<a href='#sample-use' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='sample-use'>Sample use</h1>
+<pre class="highlight swift"><code><span class="c1">// Create neural network instance</span>
+<span class="k">let</span> <span class="nv">neuralNetwork</span> <span class="o">=</span> <span class="kt">NeuralNetwork</span><span class="p">(</span><span class="nv">sizeIn</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">sizeOut</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">// Add layer with 5 columns</span>
+<span class="n">neuralNetwork</span><span class="o">.</span><span class="nf">appendLayer</span><span class="p">(</span><span class="nv">n</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1">// Back propagate</span>
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="o">..&lt;</span><span class="mi">1000</span> <span class="p">{</span>
+    <span class="n">neuralNetwork</span><span class="o">.</span><span class="nf">backPropagate</span><span class="p">(</span><span class="nv">trainingData</span><span class="p">:</span> <span class="kt">TrainingData</span><span class="p">(</span><span class="nv">vectorIn</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="nv">vectorOut</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]))</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">neuralNetwork</span><span class="o">.</span><span class="nf">propagate</span><span class="p">(</span><span class="nv">trainingData</span><span class="p">:</span> <span class="kt">TrainingData</span><span class="p">(</span><span class="nv">vectorIn</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="nv">vectorOut</span><span class="p">:</span> <span class="p">[]))</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="s">"Result: </span><span class="se">\(</span><span class="n">result</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+</code></pre>
 <a href='#repository-structure' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='repository-structure'>Repository structure</h1>
 
 <table><thead>
@@ -115,12 +137,25 @@
 <td>Source code of Rafals&rsquo;s neural network from lab</td>
 </tr>
 </tbody></table>
-<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='requirements'>Requirements</h1>
+<a href='#project-documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='project-documentation'>Project documentation</h1>
 
-<ul>
-<li>Xcode 8.0+</li>
-<li>Swift 3.0+</li>
-</ul>
+<p>API reference is located in <code>/doc</code> directory. It is a webpage created from source files by <a href="https://github.com/realm/jazzy">Jazzy</a> tool. Contains descriptions of all classes, structs, enums etc. </p>
+<a href='#updateing-api-reference' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='updateing-api-reference'>Updateing API reference</h2>
+<a href='#install-a-href-https-github-com-realm-jazzy-jazzy-a-tool' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='install-a-href-https-github-com-realm-jazzy-jazzy-a-tool'>Install <a href="https://github.com/realm/jazzy">Jazzy</a> tool</h3>
+<pre class="highlight shell"><code><span class="gp">$ </span>sudo gem install jazzy
+</code></pre>
+<a href='#go-to-project-file-directory' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='go-to-project-file-directory'>Go to project file directory</h3>
+<pre class="highlight shell"><code><span class="nb">cd source</span>/
+</code></pre>
+<a href='#generate-api-reference' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='generate-api-reference'>Generate API reference</h3>
+<pre class="highlight shell"><code><span class="gp">$ </span>jazzy <span class="se">\</span>
+--output ../doc <span class="se">\</span>
+--min-acl internal <span class="se">\</span>
+--author Rafał<span class="se">\ </span>Kitta,<span class="se">\ </span>Adrian<span class="se">\ </span>Moczulski <span class="se">\</span>
+--readme ../README.md <span class="se">\</span>
+--github_url https://github.com/rafalkitta/NeuralNetworkProject <span class="se">\</span>
+--sdk macosx
+</code></pre>
 
           </section>
         </section>
