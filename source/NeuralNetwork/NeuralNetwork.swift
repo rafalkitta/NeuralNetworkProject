@@ -104,7 +104,7 @@ class NeuralNetwork {
     /// - parameter trainingData: Training data
     ///
     /// - returns: Error vector
-    func calculateError(trainingData: TrainingData) -> [Double] {
+    private func calculateError(trainingData: TrainingData) -> [Double] {
         // Output vector from training data
         let y = trainingData.vectorOut
         // Propagation result on traning data

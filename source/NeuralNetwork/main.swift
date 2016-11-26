@@ -17,7 +17,7 @@ neuralNetwork.appendLayer(n: 5)
 
 
 // Back propagate
-for i in 0..<500 {
+for i in 0..<1000 {
     neuralNetwork.backPropagate(trainingData: TrainingData(vectorIn: [3, 4, 5], vectorOut: [0.1, 0.2, 0.3]))
 }
 
