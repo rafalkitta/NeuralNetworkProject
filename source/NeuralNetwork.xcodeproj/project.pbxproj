@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		286342A21DEF814F00402AAD /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286342A11DEF814F00402AAD /* DataSource.swift */; };
 		28C365691DE6167A0086E09B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C365681DE6167A0086E09B /* main.swift */; };
 		28C365701DE6170E0086E09B /* NeuralNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C3656F1DE6170E0086E09B /* NeuralNetwork.swift */; };
 		28C365721DE6171B0086E09B /* Perceptron.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C365711DE6171B0086E09B /* Perceptron.swift */; };
 		28C365741DE617300086E09B /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C365731DE617300086E09B /* Layer.swift */; };
 		28C365761DE617AE0086E09B /* TrainingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C365751DE617AE0086E09B /* TrainingData.swift */; };
 		28C365781DE61B610086E09B /* Activation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C365771DE61B610086E09B /* Activation.swift */; };
+		28C4A9401DEF8CB700860150 /* normalized_data.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28ED3E051DEF8A2300737208 /* normalized_data.csv */; };
 		28C9EEFE1DE62FAA003353AC /* MathHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C9EEFD1DE62FAA003353AC /* MathHelpers.swift */; };
+		28ED3E011DEF87B700737208 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED3E001DEF87B700737208 /* CSwiftV.swift */; };
+		28ED3E071DEF8A8600737208 /* normalized_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 28ED3E051DEF8A2300737208 /* normalized_data.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,9 +30,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		28C4A93F1DEF8CA600860150 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				28C4A9401DEF8CB700860150 /* normalized_data.csv in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		286342A11DEF814F00402AAD /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		28C365651DE6167A0086E09B /* NeuralNetwork */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NeuralNetwork; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C365681DE6167A0086E09B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		28C3656F1DE6170E0086E09B /* NeuralNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuralNetwork.swift; sourceTree = "<group>"; };
@@ -37,6 +52,8 @@
 		28C365751DE617AE0086E09B /* TrainingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingData.swift; sourceTree = "<group>"; };
 		28C365771DE61B610086E09B /* Activation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activation.swift; sourceTree = "<group>"; };
 		28C9EEFD1DE62FAA003353AC /* MathHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathHelpers.swift; sourceTree = "<group>"; };
+		28ED3E001DEF87B700737208 /* CSwiftV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSwiftV.swift; path = Libraries/CSwiftV.swift; sourceTree = SOURCE_ROOT; };
+		28ED3E051DEF8A2300737208 /* normalized_data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = normalized_data.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		286342A31DEF815700402AAD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				286342A11DEF814F00402AAD /* DataSource.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		286342A41DEF81BF00402AAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28ED3E051DEF8A2300737208 /* normalized_data.csv */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		28C3655C1DE6167A0086E09B = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +109,19 @@
 				28C365711DE6171B0086E09B /* Perceptron.swift */,
 				28C365771DE61B610086E09B /* Activation.swift */,
 				28C9EEFD1DE62FAA003353AC /* MathHelpers.swift */,
+				286342A31DEF815700402AAD /* Data */,
+				28ED3DFE1DEF877F00737208 /* Libraries */,
+				286342A41DEF81BF00402AAD /* Resources */,
 			);
 			path = NeuralNetwork;
+			sourceTree = "<group>";
+		};
+		28ED3DFE1DEF877F00737208 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				28ED3E001DEF87B700737208 /* CSwiftV.swift */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +134,8 @@
 				28C365611DE6167A0086E09B /* Sources */,
 				28C365621DE6167A0086E09B /* Frameworks */,
 				28C365631DE6167A0086E09B /* CopyFiles */,
+				28ED3E061DEF8A8100737208 /* Resources */,
+				28C4A93F1DEF8CA600860150 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -133,6 +179,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		28ED3E061DEF8A8100737208 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28ED3E071DEF8A8600737208 /* normalized_data.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28C365611DE6167A0086E09B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +201,8 @@
 				28C365701DE6170E0086E09B /* NeuralNetwork.swift in Sources */,
 				28C365741DE617300086E09B /* Layer.swift in Sources */,
 				28C365761DE617AE0086E09B /* TrainingData.swift in Sources */,
+				286342A21DEF814F00402AAD /* DataSource.swift in Sources */,
+				28ED3E011DEF87B700737208 /* CSwiftV.swift in Sources */,
 				28C9EEFE1DE62FAA003353AC /* MathHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
