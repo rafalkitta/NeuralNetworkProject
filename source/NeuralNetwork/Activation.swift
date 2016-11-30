@@ -19,6 +19,7 @@ import Foundation
 /// - Unipolar:       Unipolar activation function
 /// - Sigmoidal:      Sigmoidal activation function
 /// - SigmoidalDeriv: Derivative sigmoidal activation function
+/// - Softmax:        Softmax activation function
 public enum ActivationFunction {
     
     /// Unipolar activation function
@@ -29,6 +30,10 @@ public enum ActivationFunction {
     
     /// Derivateve sigmoidal function
     case SigmoidalDeriv(β: Double, x: Double)
+    
+    /// Softmax function.
+    /// Calculates e^x / ∑(e^xi). In denominator is sum of e to the power of each value in vector.
+    case Softmax(vector: [Double], x: Double)
     
     
     /// Perform specific activation function on given parameters
@@ -44,6 +49,12 @@ public enum ActivationFunction {
             
         case .SigmoidalDeriv(_, let x):
             return x * (1 - x)
+            
+        case .Softmax(let vector, let x):
+            let denominator = vector
+                .map { pow(M_E, $0) }
+                .reduce(0, +)
+            return pow(M_E, x) / denominator
         }
     }
 }
