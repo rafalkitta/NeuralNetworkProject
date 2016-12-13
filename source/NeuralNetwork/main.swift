@@ -9,19 +9,25 @@
 import Foundation
 
 
+// 
+let dataSource = HebermanSurvivalDataSet()
+
+
 // Create neural network instance
-let neuralNetwork = NeuralNetwork(sizeIn: 3, sizeOut: 3)
+let neuralNetwork = NeuralNetwork(sizeIn: 3, sizeOut: 1)
 
 // Add layer with 5 columns
 neuralNetwork.appendLayer(n: 5)
 
 
 // Back propagate
-for i in 0..<1000 {
-    neuralNetwork.backPropagate(trainingData: TrainingData(vectorIn: [3, 4, 5], vectorOut: [0.1, 0.2, 0.3]))
+for sample in dataSource.samples {
+    neuralNetwork.backPropagate(trainingData: TrainingData(vectorIn: [sample.age, sample.surgeryYear, sample.positiveAuxiliaryNodes], vectorOut: [sample.didSurvive]))
 }
 
-let result = neuralNetwork.propagate(trainingData: TrainingData(vectorIn: [3, 4, 5], vectorOut: []))
+
+// 0.509433962264151;0.272727272727273;0.961538461538462;0;1
+let result = neuralNetwork.propagate(trainingData: TrainingData(vectorIn: [0.509433962264151, 0.272727272727273, 0.961538461538462], vectorOut: []))
 
 print("Result: \(result)")
 
