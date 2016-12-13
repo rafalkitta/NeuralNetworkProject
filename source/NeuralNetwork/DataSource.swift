@@ -13,14 +13,14 @@ struct HebermanSurvivalDataSet {
     var samples: [HebermanSurvivalSample] = []
     
     init() {
-        if let path = Bundle.main.path(forResource: "normalized_data", ofType: "csv") {
+        if let path = Bundle.main.path(forResource: "normalized_data_v2", ofType: "csv") {
             do {
                 let straingData = try String(contentsOfFile: path, encoding: .utf8)
                 let csv = CSwiftV(with: straingData, separator: ";", headers: [String](repeating: "", count: 5))
                 
                 // Iterate over csv rows
                 for row in csv.rows {
-                    let sample = HebermanSurvivalSample(age: Double(row[0])!, surgeryYear: Double(row[1])!, positiveAuxiliaryNodes: Double(row[2])!, died: Double(row[3])!, survive: Double(row[4])!)
+                    let sample = HebermanSurvivalSample(age: Double(row[0])!, surgeryYear: Double(row[1])!, positiveAuxiliaryNodes: Double(row[2])!, didSurvive: Double(row[3])!)
                     samples.append(sample)
                 }
                 
@@ -37,8 +37,7 @@ struct HebermanSurvivalSample {
     var age: Double
     var surgeryYear: Double
     var positiveAuxiliaryNodes: Double
-    var died: Double
-    var survive: Double
+    var didSurvive: Double
 }
 
 

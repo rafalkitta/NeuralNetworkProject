@@ -14,7 +14,7 @@ let dataSource = HebermanSurvivalDataSet()
 
 
 // Create neural network instance
-let neuralNetwork = NeuralNetwork(sizeIn: 3, sizeOut: 2)
+let neuralNetwork = NeuralNetwork(sizeIn: 3, sizeOut: 1)
 
 // Add layer with 5 columns
 neuralNetwork.appendLayer(n: 5)
@@ -22,7 +22,7 @@ neuralNetwork.appendLayer(n: 5)
 
 // Back propagate
 for sample in dataSource.samples {
-    neuralNetwork.backPropagate(trainingData: TrainingData(vectorIn: [sample.age, sample.surgeryYear, sample.positiveAuxiliaryNodes], vectorOut: [sample.died, sample.survive]))
+    neuralNetwork.backPropagate(trainingData: TrainingData(vectorIn: [sample.age, sample.surgeryYear, sample.positiveAuxiliaryNodes], vectorOut: [sample.didSurvive]))
 }
 
 
