@@ -37,9 +37,8 @@ class CrossValidation {
             for (i,sample) in dataSource.samples.enumerated() {
                 
                 // skipping the item usesd for validating
-                if i != skipIndex {
-                    neuralNetwork.backPropagate(trainingData: TrainingData(vectorIn: [sample.age, sample.surgeryYear, sample.positiveAuxiliaryNodes], vectorOut: [sample.didSurvive]))
-                }
+                guard i != skipIndex else { continue }
+                neuralNetwork.backPropagate(trainingData: TrainingData(vectorIn: [sample.age, sample.surgeryYear, sample.positiveAuxiliaryNodes], vectorOut: [sample.didSurvive]))
             }
             
             // after training, calculating the results for skipIndex
@@ -50,20 +49,4 @@ class CrossValidation {
         }
         return deltaValues
     }
-}
-
-extension NeuralNetwork {
-    convenience init(withNNInitParameters initParameters: NeuralNetworkInitParameters) {
-        self.init(sizeIn: initParameters.sizeIn, sizeOut: initParameters.sizeOut)
-        for layerSize in initParameters.layersSizes {
-            self.appendLayer(n: layerSize)
-        }
-    }
-}
-
-
-struct NeuralNetworkInitParameters {
-    let sizeIn : Int
-    let sizeOut : Int
-    let layersSizes : [Int]
 }
