@@ -13,7 +13,7 @@ struct HebermanSurvivalDataSet {
     var samples: [HebermanSurvivalSample] = []
     
     init() {
-        if let path = Bundle.main.path(forResource: "normalized_data_v2", ofType: "csv") {
+        if let path = Bundle.main.path(forResource: "normalized_data", ofType: "csv") {
             do {
                 let straingData = try String(contentsOfFile: path, encoding: .utf8)
                 let csv = CSwiftV(with: straingData, separator: ";", headers: [String](repeating: "", count: 5))

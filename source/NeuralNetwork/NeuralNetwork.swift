@@ -142,6 +142,22 @@ public class NeuralNetwork {
 }
 
 
+// MARK: - Initializer with NeuralNetworkInitParameters
+extension NeuralNetwork {
+    convenience init(withNNInitParameters initParameters: NeuralNetworkInitParameters) {
+        self.init(sizeIn: initParameters.sizeIn, sizeOut: initParameters.sizeOut)
+        for layerSize in initParameters.layersSizes {
+            self.appendLayer(n: layerSize)
+        }
+    }
+}
+
+struct NeuralNetworkInitParameters {
+    let sizeIn : Int
+    let sizeOut : Int
+    let layersSizes : [Int]
+}
+
 // MARK: - CustomStringConvertible
 extension NeuralNetwork: CustomStringConvertible {
     
