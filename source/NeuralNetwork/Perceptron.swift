@@ -15,30 +15,32 @@ public struct Perceptron {
     // Matrix size
     
     /// Number of `matrix` rows
-    public var m: Int = 0
+    public var rows: Int = 0
     
     /// Number of `matrix` columns
-    public var n: Int = 0
+    public var columns: Int = 0
     
-    /// Matrix: m x n
+    /// Matrix: rows x columns
     public var matrix: [[Double]] = [[]]
     
     
     /// Default initializer. Creates empty matrixo on given sizes (m x n). 
     ///
-    /// - parameter m:            Number of matrix rows
-    /// - parameter n:            Number of matrics colums
+    /// - parameter rows:         Number of matrix rows
+    /// - parameter columns:      Number of matrics colums
     /// - parameter defaultValue: Default value of matrix
     ///
     /// - returns: `Perceptron` instance
-    public init(m: Int, n: Int, defaultValue: Double = 0.0) {
-        self.m = m // rows
-        self.n = n // columns
-        self.matrix = [[Double]](repeating: [Double](repeating: defaultValue, count: n), count: m)
+    public init(rows: Int, columns: Int, defaultValue: Double = 0.0) {
+        self.rows = rows
+        self.columns = columns
+        self.matrix = [[Double]](repeating: [Double](repeating: defaultValue, count: columns), count: rows)
     }
     
     
     /// Populates matrix with random values from range: -5...5
+    ///
+    /// - Note: mutate `matrix property`
     public mutating func randomizeMatrix() {
         // Iterate through rows
         for i in 0..<matrix.count {
@@ -56,7 +58,7 @@ extension Perceptron: CustomStringConvertible {
     
     /// Structure instance description format
     public var description: String {
-        return "\nrows(m): \(m), colums(n): \(n), \(matrix)"
+        return "\nrows: \(rows), colums: \(columns), \(matrix)"
     }
 }
 

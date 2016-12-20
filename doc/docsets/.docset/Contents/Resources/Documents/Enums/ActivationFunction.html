@@ -14,7 +14,7 @@
     <a title="ActivationFunction Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p><a href="../index.html"> Docs</a> (92% documented)</p>
         <p class="header-right"><a href="https://github.com/rafalkitta/NeuralNetworkProject"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -32,7 +32,36 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/CSwiftV.html">CSwiftV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CrossValidation.html">CrossValidation</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NeuralNetwork.html">NeuralNetwork</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork9cvResultsGSaSd_">cvResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork10dataSourceVS_23HebermanSurvivalDataSet">dataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork13neuralNetworkCS_13NeuralNetwork">neuralNetwork</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork12nnInitParamsVS_27NeuralNetworkInitParameters">nnInitParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork6resultGSaSd_">result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork10validationCS_15CrossValidation">validation</a>
               </li>
             </ul>
           </li>
@@ -41,6 +70,14 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/ActivationFunction.html">ActivationFunction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
               </li>
             </ul>
           </li>
@@ -65,7 +102,16 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/HebermanSurvivalDataSet.html">HebermanSurvivalDataSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HebermanSurvivalSample.html">HebermanSurvivalSample</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Layer.html">Layer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NeuralNetworkInitParameters.html">NeuralNetworkInitParameters</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Perceptron.html">Perceptron</a>
@@ -90,7 +136,7 @@
             <p>Enum of activation functions. To use activation function, use <code>perform()</code> method directly on activation fuction.</p>
 
 <p>Example:
-<code>swift
+<code>
 let result = ActivationFunction.Sigmoidal(β: -1, x: 1.2345).perform()
 </code></p>
 
@@ -98,6 +144,7 @@ let result = ActivationFunction.Sigmoidal(β: -1, x: 1.2345).perform()
 <li>Unipolar:       Unipolar activation function</li>
 <li>Sigmoidal:      Sigmoidal activation function</li>
 <li>SigmoidalDeriv: Derivative sigmoidal activation function</li>
+<li>Softmax:        Softmax activation function</li>
 </ul>
 
           </section>
@@ -200,6 +247,38 @@ let result = ActivationFunction.Sigmoidal(β: -1, x: 1.2345).perform()
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FO13NeuralNetwork18ActivationFunction7SoftmaxFMS0_FT6vectorGSaSd_1xSd_S0_"></a>
+                    <a name="//apple_ref/swift/Element/Softmax" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO13NeuralNetwork18ActivationFunction7SoftmaxFMS0_FT6vectorGSaSd_1xSd_S0_">Softmax</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Softmax function.
+Calculates e^x / ∑(e^xi). In denominator is sum of e to the power of each value in vector.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Softmax</span><span class="p">(</span><span class="nv">vector</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">],</span> <span class="nv">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FO13NeuralNetwork18ActivationFunction7performFT_Sd"></a>
                     <a name="//apple_ref/swift/Method/perform()" class="dashAnchor"></a>
                     <a class="token" href="#/s:FO13NeuralNetwork18ActivationFunction7performFT_Sd">perform()</a>
@@ -234,7 +313,7 @@ let result = ActivationFunction.Sigmoidal(β: -1, x: 1.2345).perform()
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Rafał Kitta, Adrian Moczulski</a>. All rights reserved. (Last updated: 2016-11-26)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Rafał Kitta, Adrian Moczulski</a>. All rights reserved. (Last updated: 2016-12-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

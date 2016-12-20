@@ -16,8 +16,9 @@ public struct Layer {
     public var perceptron: Perceptron
     
     /// Values vector with values count equal to perceptron culumns number
+    ///
     /// - Note: Defaultly initialized with values: 0.0
-    public lazy var values: [Double] = [Double](repeating: Double(), count: self.perceptron.n)
+    public lazy var values: [Double] = [Double](repeating: Double(), count: self.perceptron.columns)
     
     
     /// Defult initializer

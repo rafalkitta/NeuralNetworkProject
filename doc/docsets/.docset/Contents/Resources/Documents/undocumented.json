@@ -1,6 +1,47 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/rafalkitta/Desktop/NeuralNetworkProject/source/NeuralNetwork/main.swift",
+      "line": 15,
+      "symbol": "dataSource",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rafalkitta/Desktop/NeuralNetworkProject/source/NeuralNetwork/main.swift",
+      "line": 19,
+      "symbol": "neuralNetwork",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rafalkitta/Desktop/NeuralNetworkProject/source/NeuralNetwork/main.swift",
+      "line": 32,
+      "symbol": "result",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rafalkitta/Desktop/NeuralNetworkProject/source/NeuralNetwork/main.swift",
+      "line": 37,
+      "symbol": "nnInitParams",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rafalkitta/Desktop/NeuralNetworkProject/source/NeuralNetwork/main.swift",
+      "line": 38,
+      "symbol": "validation",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rafalkitta/Desktop/NeuralNetworkProject/source/NeuralNetwork/main.swift",
+      "line": 39,
+      "symbol": "cvResults",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/rafalkitta/Desktop/NeuralNetworkProject/source"
 }

@@ -13,7 +13,7 @@
     <a title="Structs  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html"> Docs</a> (100% documented)</p>
+        <p><a href="index.html"> Docs</a> (92% documented)</p>
         <p class="header-right"><a href="https://github.com/rafalkitta/NeuralNetworkProject"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -31,7 +31,36 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/CSwiftV.html">CSwiftV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CrossValidation.html">CrossValidation</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/NeuralNetwork.html">NeuralNetwork</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v13NeuralNetwork9cvResultsGSaSd_">cvResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v13NeuralNetwork10dataSourceVS_23HebermanSurvivalDataSet">dataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v13NeuralNetwork13neuralNetworkCS_13NeuralNetwork">neuralNetwork</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v13NeuralNetwork12nnInitParamsVS_27NeuralNetworkInitParameters">nnInitParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v13NeuralNetwork6resultGSaSd_">result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v13NeuralNetwork10validationCS_15CrossValidation">validation</a>
               </li>
             </ul>
           </li>
@@ -40,6 +69,14 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/ActivationFunction.html">ActivationFunction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
               </li>
             </ul>
           </li>
@@ -64,7 +101,16 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Structs/HebermanSurvivalDataSet.html">HebermanSurvivalDataSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HebermanSurvivalSample.html">HebermanSurvivalSample</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/Layer.html">Layer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/NeuralNetworkInitParameters.html">NeuralNetworkInitParameters</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/Perceptron.html">Perceptron</a>
@@ -108,6 +154,45 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Perceptron</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializer%20with%20NeuralNetworkInitParameters"></a>
+                <a name="//apple_ref/swift/Section/Initializer with NeuralNetworkInitParameters" class="dashAnchor"></a>
+                <a href="#/Initializer%20with%20NeuralNetworkInitParameters">
+                  <h3 class="section-name">Initializer with NeuralNetworkInitParameters</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V13NeuralNetwork27NeuralNetworkInitParameters"></a>
+                    <a name="//apple_ref/swift/Struct/NeuralNetworkInitParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V13NeuralNetwork27NeuralNetworkInitParameters">NeuralNetworkInitParameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Structure contains <code>NuralNetwork</code> init parameters, all required to properly create <code><a href="Classes/NeuralNetwork.html">NeuralNetwork</a></code> instance</p>
+
+                        <a href="Structs/NeuralNetworkInitParameters.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">NeuralNetworkInitParameters</span></code></pre>
 
                         </div>
                       </div>
@@ -180,10 +265,74 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V13NeuralNetwork23HebermanSurvivalDataSet"></a>
+                    <a name="//apple_ref/swift/Struct/HebermanSurvivalDataSet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V13NeuralNetwork23HebermanSurvivalDataSet">HebermanSurvivalDataSet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Struct represents data set of Haberman’s survival data.
+Creating instance of <code>HebermanSurvivalDataSet</code> is eqivalent to reading <code>normalized_data.csv</code> file and parsing data 
+from this file into Array of <code><a href="Structs/HebermanSurvivalSample.html">HebermanSurvivalSample</a></code> models.</p>
+
+                        <a href="Structs/HebermanSurvivalDataSet.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HebermanSurvivalDataSet</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V13NeuralNetwork22HebermanSurvivalSample"></a>
+                    <a name="//apple_ref/swift/Struct/HebermanSurvivalSample" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V13NeuralNetwork22HebermanSurvivalSample">HebermanSurvivalSample</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Structure represents single sample of Heberman&rsquo;s survival data. Describes singe sample of <code><a href="Structs/HebermanSurvivalDataSet.html">HebermanSurvivalDataSet</a></code>.
+Contains informations about patient age, surgery year, number of positive axillary nodes detected and flag determines 
+if patient survived 5 yeares or longer.</p>
+
+                        <a href="Structs/HebermanSurvivalSample.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HebermanSurvivalSample</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Rafał Kitta, Adrian Moczulski</a>. All rights reserved. (Last updated: 2016-11-26)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Rafał Kitta, Adrian Moczulski</a>. All rights reserved. (Last updated: 2016-12-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

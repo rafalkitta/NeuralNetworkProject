@@ -37,10 +37,10 @@ public class NeuralNetwork {
         self.sizeOut = sizeOut
         
         // Append first layer, initially empty - start
-        self.layers.append(Layer(perceptron: Perceptron(m: 0, n: sizeIn)))
+        self.layers.append(Layer(perceptron: Perceptron(rows: 0, columns: sizeIn)))
         
         // Append last layer -
-        self.layers.append(Layer(perceptron: Perceptron(m: sizeIn, n: sizeOut)))
+        self.layers.append(Layer(perceptron: Perceptron(rows: sizeIn, columns: sizeOut)))
     }
     
     
@@ -55,12 +55,12 @@ public class NeuralNetwork {
         // Rewrite all layers except last one
         for i in 0..<(layers.count - 1) {
             newLayers.append(layers[i])
-            last = layers[i].perceptron.n
+            last = layers[i].perceptron.columns
         }
         
         // Insert new layer
-        newLayers.append(Layer(perceptron: Perceptron(m: last, n: n)))
-        newLayers.append(Layer(perceptron: Perceptron(m: n, n: sizeOut)))
+        newLayers.append(Layer(perceptron: Perceptron(rows: last, columns: n)))
+        newLayers.append(Layer(perceptron: Perceptron(rows: n, columns: sizeOut)))
         
         // Store new layers array
         layers = newLayers
@@ -144,19 +144,34 @@ public class NeuralNetwork {
 
 // MARK: - Initializer with NeuralNetworkInitParameters
 extension NeuralNetwork {
+    
+    /// Convenience initializer
+    /// Allows to initialize `NeuralNetwork` instance with `NeuralNetworkInitParameters` object.
+    ///
+    /// - Parameter initParameters: All init parameters in single object
     convenience init(withNNInitParameters initParameters: NeuralNetworkInitParameters) {
         self.init(sizeIn: initParameters.sizeIn, sizeOut: initParameters.sizeOut)
+        
         for layerSize in initParameters.layersSizes {
             self.appendLayer(n: layerSize)
         }
     }
 }
 
+
+/// Structure contains `NuralNetwork` init parameters, all required to properly create `NeuralNetwork` instance
 struct NeuralNetworkInitParameters {
-    let sizeIn : Int
-    let sizeOut : Int
-    let layersSizes : [Int]
+    
+    /// Input layer vector size
+    let sizeIn: Int
+    
+    /// Output layer vector size
+    let sizeOut: Int
+    
+    /// Hidden layers sizes
+    let layersSizes: [Int]
 }
+
 
 // MARK: - CustomStringConvertible
 extension NeuralNetwork: CustomStringConvertible {

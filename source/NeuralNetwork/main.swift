@@ -9,7 +9,9 @@
 import Foundation
 
 
-// 
+/// MARK: - Demo
+
+// Populate data source
 let dataSource = HebermanSurvivalDataSet()
 
 
@@ -31,10 +33,11 @@ let result = neuralNetwork.propagate(trainingData: TrainingData(vectorIn: [0.509
 
 //print("Result: \(result)")
 
+// Cross Validation
 let nnInitParams = NeuralNetworkInitParameters(sizeIn: 3, sizeOut: 1, layersSizes: [5])
 let validation = CrossValidation(nnInitParams, dataSet: dataSource)
 let cvResults = validation.validate()
 
 for dtResult in cvResults {
-    print(dtResult)
+//    print(dtResult)
 }

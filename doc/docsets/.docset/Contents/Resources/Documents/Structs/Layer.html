@@ -14,7 +14,7 @@
     <a title="Layer Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <p><a href="../index.html"> Docs</a> (92% documented)</p>
         <p class="header-right"><a href="https://github.com/rafalkitta/NeuralNetworkProject"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -32,7 +32,36 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Classes/CSwiftV.html">CSwiftV</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CrossValidation.html">CrossValidation</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NeuralNetwork.html">NeuralNetwork</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork9cvResultsGSaSd_">cvResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork10dataSourceVS_23HebermanSurvivalDataSet">dataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork13neuralNetworkCS_13NeuralNetwork">neuralNetwork</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork12nnInitParamsVS_27NeuralNetworkInitParameters">nnInitParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork6resultGSaSd_">result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v13NeuralNetwork10validationCS_15CrossValidation">validation</a>
               </li>
             </ul>
           </li>
@@ -41,6 +70,14 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/ActivationFunction.html">ActivationFunction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
               </li>
             </ul>
           </li>
@@ -65,7 +102,16 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/HebermanSurvivalDataSet.html">HebermanSurvivalDataSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HebermanSurvivalSample.html">HebermanSurvivalSample</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Layer.html">Layer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NeuralNetworkInitParameters.html">NeuralNetworkInitParameters</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Perceptron.html">Perceptron</a>
@@ -133,15 +179,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Values vector with values count equal to perceptron culumns number
-- Note: Defaultly initialized with values: 0.0</p>
+                        <p>Values vector with values count equal to perceptron culumns number</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Defaultly initialized with values: 0.0
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Double</span><span class="p">](</span><span class="nv">repeating</span><span class="p">:</span> <span class="kt">Double</span><span class="p">(),</span> <span class="nv">count</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n"><a href="../Structs/Layer.html#/s:vV13NeuralNetwork5Layer10perceptronVS_10Perceptron">perceptron</a></span><span class="o">.</span><span class="n">n</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">values</span><span class="p">:</span> <span class="p">[</span><span class="kt">Double</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Double</span><span class="p">](</span><span class="nv">repeating</span><span class="p">:</span> <span class="kt">Double</span><span class="p">(),</span> <span class="nv">count</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n"><a href="../Structs/Layer.html#/s:vV13NeuralNetwork5Layer10perceptronVS_10Perceptron">perceptron</a></span><span class="o">.</span><span class="n">columns</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -236,7 +287,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Rafał Kitta, Adrian Moczulski</a>. All rights reserved. (Last updated: 2016-11-26)</p>
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Rafał Kitta, Adrian Moczulski</a>. All rights reserved. (Last updated: 2016-12-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

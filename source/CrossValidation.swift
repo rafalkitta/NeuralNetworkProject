@@ -8,21 +8,38 @@
 
 import Foundation
 
+
+/// Cross validation class
 class CrossValidation {
-    var neuralNetwork : NeuralNetwork
-    var dataSet : HebermanSurvivalDataSet
-    var nnParameters : NeuralNetworkInitParameters
     
+    /// Neural network
+    var neuralNetwork: NeuralNetwork
+    
+    /// Heberman`s survival data set
+    var dataSet: HebermanSurvivalDataSet
+    
+    /// Neural network init parameters
+    var nnParameters: NeuralNetworkInitParameters
+    
+    
+    /// Default initializer
+    ///
+    /// - Parameters:
+    ///   - neuralNetworkParameters: Neural network init parameters
+    ///   - dataSet:                 Heberman`s survival data set
     init(_ neuralNetworkParameters: NeuralNetworkInitParameters, dataSet: HebermanSurvivalDataSet) {
         self.neuralNetwork = NeuralNetwork(withNNInitParameters: neuralNetworkParameters)
         self.dataSet = dataSet
         self.nnParameters = neuralNetworkParameters
     }
     
+    
+    /// Performs Leave-one-out cross-validation
+    ///
+    /// - Returns: delta value
     func validate() -> [Double] {
         // the array with diffrences between calculated value and target value
         var deltaValues = [Double]()
-        
         
         // skip index is the index of data set using for validating
         // it's skipped during training
@@ -47,6 +64,7 @@ class CrossValidation {
             // appending delta value to the output array
             deltaValues.append(result[0] - validationItem.didSurvive)
         }
+        
         return deltaValues
     }
 }

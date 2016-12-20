@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,27 +15,29 @@
 		28C365761DE617AE0086E09B /* TrainingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C365751DE617AE0086E09B /* TrainingData.swift */; };
 		28C365781DE61B610086E09B /* Activation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C365771DE61B610086E09B /* Activation.swift */; };
 		28C9EEFE1DE62FAA003353AC /* MathHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C9EEFD1DE62FAA003353AC /* MathHelpers.swift */; };
+		28E0D4591E09CECC00FF26F4 /* normalized_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 692C5C4E1E00827700C3AFE8 /* normalized_data.csv */; };
+		28E0D45B1E09D6BD00FF26F4 /* normalized_data.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 692C5C4E1E00827700C3AFE8 /* normalized_data.csv */; };
 		28ED3E011DEF87B700737208 /* CSwiftV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED3E001DEF87B700737208 /* CSwiftV.swift */; };
-		692C5C4F1E00827700C3AFE8 /* normalized_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 692C5C4E1E00827700C3AFE8 /* normalized_data.csv */; };
 		692C5C521E008F0A00C3AFE8 /* CrossValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692C5C511E008F0A00C3AFE8 /* CrossValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		28C365631DE6167A0086E09B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		28C4A93F1DEF8CA600860150 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E0D45A1E09D61000FF26F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				28E0D45B1E09D6BD00FF26F4 /* normalized_data.csv in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +144,9 @@
 			buildPhases = (
 				28C365611DE6167A0086E09B /* Sources */,
 				28C365621DE6167A0086E09B /* Frameworks */,
-				28C365631DE6167A0086E09B /* CopyFiles */,
 				28ED3E061DEF8A8100737208 /* Resources */,
 				28C4A93F1DEF8CA600860150 /* CopyFiles */,
+				28E0D45A1E09D61000FF26F4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -172,7 +174,7 @@
 				};
 			};
 			buildConfigurationList = 28C365601DE6167A0086E09B /* Build configuration list for PBXProject "NeuralNetwork" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -193,7 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				692C5C4F1E00827700C3AFE8 /* normalized_data.csv in Resources */,
+				28E0D4591E09CECC00FF26F4 /* normalized_data.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

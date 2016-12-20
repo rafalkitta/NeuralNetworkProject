@@ -12,7 +12,7 @@ import Foundation
 /// Enum of activation functions. To use activation function, use `perform()` method directly on activation fuction.
 ///
 /// Example:
-/// ```swift
+/// ```
 /// let result = ActivationFunction.Sigmoidal(β: -1, x: 1.2345).perform()
 /// ```
 ///
